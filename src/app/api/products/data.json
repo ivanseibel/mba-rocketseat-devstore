@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Sweatshirt Never Stop Learning",
+      "slug": "sweatshirt-never-stop-learning",
+      "price": 129,
+      "image": "/sweatshirt-never-stop-learning.png",
+      "description": "Sweatshirt made with 88% cotton and 12% polyester.",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Sweatshirt AI Side",
+      "slug": "sweatshirt-ai-side",
+      "price": 99,
+      "image": "/sweatshirt-ai-side.png",
+      "description": "Sweatshirt made with 88% cotton and 12% polyester.",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "T-shirt DoWhile 2022",
+      "slug": "t-shirt-dowhile-2022",
+      "price": 69,
+      "image": "/t-shirt-dowhile-2022.png",
+      "description": "T-shirt made with 100% cotton.",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Sweatshirt Java 2023",
+      "slug": "sweatshirt-java-2023",
+      "price": 99,
+      "image": "/sweatshirt-java.png",
+      "description": "Sweatshirt made with 88% cotton and 12% polyester.",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Sweatshirt AI for devs",
+      "slug": "sweatshirt-ai-for-devs",
+      "price": 99,
+      "image": "/sweatshirt-ai-for-devs.png",
+      "description": "Sweatshirt made with 88% cotton and 12% polyester.",
+      "featured": false
+    }
+  ]
+}
