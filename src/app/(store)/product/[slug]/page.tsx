@@ -1,3 +1,4 @@
+import { AddToCartButton } from '@/app/components/add-to-cart-button'
 import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
 import { Metadata } from 'next'
@@ -44,8 +45,6 @@ export default async function ProductDetailsPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-
-  console.log('Slug:', slug)
 
   const product = await getProduct(slug)
 
@@ -120,12 +119,7 @@ export default async function ProductDetailsPage({
           </div>
         </div>
 
-        <button
-          type="button"
-          className="mt-8 flex h-12 items-center justify-center rounded-full bg-emerald-600 hover:bg-emerald-600/50 font-semibold text-white"
-        >
-          Add to cart
-        </button>
+        <AddToCartButton id={product.id} />
       </div>
     </div>
   )

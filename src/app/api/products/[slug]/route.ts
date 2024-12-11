@@ -17,7 +17,5 @@ export async function GET(
     return Response.json({ message: 'Product not found' }, { status: 400 })
   }
 
-  console.log('Product:', product)
-
   return Response.json(product)
 }

@@ -1,13 +1,9 @@
-'use client'
-
 import Link from 'next/link'
-import { Search, ShoppingBag } from 'lucide-react'
+import { Search } from 'lucide-react'
 import Image from 'next/image'
-import { useCart } from '@/contexts/cart-context'
+import { CartWidget } from './cart-widget'
 
 export function Header() {
-  const { items } = useCart()
-
   return (
     <header className="flex items-center justify-between">
       <div className="flex items-center gap-5">
@@ -25,10 +21,7 @@ export function Header() {
         </form>
       </div>
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-2">
-          <ShoppingBag className="size-4" />
-          <span className="text-sm">Cart ({items.length})</span>
-        </div>
+        <CartWidget />
 
         <div className="w-px h-4 bg-zinc-700" />
 
