@@ -17,7 +17,7 @@ export default async function HomePage() {
   return (
     <div className="grid max-h-[800px] grid-cols-9 grid-rows-6 gap-6">
       <Link
-        href={`/products/${highlightedProduct.slug}`}
+        href={`/product/${highlightedProduct.slug}`}
         className="relative group col-span-6 row-span-6 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-baseline"
       >
         <Image
@@ -44,7 +44,7 @@ export default async function HomePage() {
       {otherProducts.map((product) => (
         <Link
           key={product.id}
-          href={`/products/${product.slug}`}
+          href={`/product/${product.slug}`}
           className="relative group col-span-3 row-span-3 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-baseline"
         >
           <Image
