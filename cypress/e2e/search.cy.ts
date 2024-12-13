@@ -1,9 +1,7 @@
 describe('search for products', () => {
   it('should be able to find a product', () => {
-    cy.visit('/')
     const productTitle = 'Sweatshirt'
-    cy.get('input[name="q"]').type(productTitle)
-    cy.get('input[name="q"]').parent('form').submit()
+    cy.searchByQuery(productTitle)
 
     cy.location('pathname').should('include', '/search')
     cy.location('search').should('include', `q=${productTitle}`)
@@ -14,10 +12,8 @@ describe('search for products', () => {
   })
 
   it('should display a message when no products are found', () => {
-    cy.visit('/')
     const productTitle = 'Non-existing'
-    cy.get('input[name="q"]').type(productTitle)
-    cy.get('input[name="q"]').parent('form').submit()
+    cy.searchByQuery(productTitle)
 
     cy.location('pathname').should('include', '/search')
     cy.location('search').should('include', `q=${productTitle}`)

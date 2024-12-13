@@ -25,8 +25,7 @@ describe('add product to cart', () => {
 
   it('should be able to search for a product and add it to the cart', () => {
     const productTitle = 'Sweatshirt Never Stop Learning'
-    cy.get('input[name="q"]').type(productTitle)
-    cy.get('input[name="q"]').parent('form').submit()
+    cy.searchByQuery(productTitle)
 
     cy.contains('Results for:').should('exist')
 
