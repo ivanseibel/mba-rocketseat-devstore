@@ -5,9 +5,9 @@ import { api } from '@/data/api'
 import { redirect } from 'next/navigation'
 
 interface SearchPageProps {
-  searchParams: {
+  searchParams: Promise<{
     q: string
-  }
+  }>
 }
 
 async function searchProducts(query: string): Promise<Product[]> {
@@ -24,7 +24,7 @@ async function searchProducts(query: string): Promise<Product[]> {
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
-  const { q: query } = searchParams
+  const { q: query } = await searchParams
 
   if (!query) {
     return redirect('/')
