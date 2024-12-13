@@ -16,9 +16,5 @@ export async function GET(request: NextRequest) {
     product.title.toLocaleLowerCase().includes(query.toLocaleLowerCase()),
   )
 
-  if (products.length === 0) {
-    return Response.json({ message: 'No products found' }, { status: 404 })
-  }
-
   return Response.json(products)
 }
